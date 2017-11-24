@@ -46,8 +46,6 @@ def deepnn(x):
 
         h_pool = max_pool_2x2(h_conv)
         
-  # Fully connected layer 1 -- after 2 round of downsampling, our 28x28 image
-  # is down to 7x7x64 feature maps -- maps this to 1024 features.
     with tf.name_scope('fc1'):
         W_fc1 = weight_variable([4 * 4 * 64, 256])
         b_fc1 = bias_variable([256])
@@ -55,13 +53,10 @@ def deepnn(x):
         h_pool2_flat = tf.reshape(h_pool, [-1, 4*4*64])        
         h_fc1 = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)  
 
-  # Dropout - controls the complexity of the model, prevents co-adaptation of
-  # features.
     with tf.name_scope('dropout'):
         keep_prob = tf.placeholder(tf.float32)
         h_fc1_drop = tf.nn.dropout(h_fc1, keep_prob)
 
-  # Map the 1024 features to 10 classes, one for each digit
     with tf.name_scope('fc2'):
         W_fc2 = weight_variable([256, 10])
         b_fc2 = bias_variable([10])
@@ -82,13 +77,11 @@ def max_pool_2x2(x):
 
 
 def weight_variable(shape):
-    """weight_variable generates a weight variable of a given shape."""
     initial = tf.truncated_normal(shape, stddev=0.1)                  
     return tf.Variable(initial)                                      
                                                                      
 
 def bias_variable(shape):
-    """bias_variable generates a bias variable of a given shape."""
     initial = tf.constant(0.1, shape=shape)
     return tf.Variable(initial)
 
