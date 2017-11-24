@@ -11,11 +11,6 @@ FLAGS = None
 
 
 def deepnn(x):
-#    with tf.name_scope('reshape'):                        
-#        x_image = tf.reshape(x, [-1, 28, 28, 1])           
-                                                 
-    
-    # First convolutional layer - maps one grayscale image to 32 feature maps.
     with tf.name_scope('block0'):
         with tf.name_scope('conv0'):
             W_conv = weight_variable([3, 3, 3, 16])
