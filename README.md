@@ -11,15 +11,6 @@
  현재 멤버는 총 4명으로 구성되어있습니다.
  
  
- 멤버  |  연구 분야   |  관심 분야
- ---  |  -------   |  -------
- 이승현 | 영상신호처리  |  Object tracking
- 김대하 | 영상신호처리  |  Emotion recognition
- 강진구 | 생체신호처리  |  Object segmentation
- 이민규 | 영상신호처리  |  Action recognition
- 
- 
- 
 연구를 위해 주로 사용하는 딥 러닝 라이브러리는 python 기반의 tensorflow, slim, keras, 그리고 torch 입니다.
 
 스터디 그룹에 관해 궁금한 점 있거나 문의 사항 있으시면 메일 또는 코멘트 부탁드립니다.
