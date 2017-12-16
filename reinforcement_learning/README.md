@@ -13,5 +13,5 @@ Welcome to reinforcement learning corner
 강화학습 스터디에서 참고한 책, 그리고 일부 내용은 다음과 같습니다.
 
 [파이썬과 케라스로 배우는 강화학습]
-"https://github.com/rlcode/reinforcement-learning-krhttps://github.com/rlcode"
+"https://github.com/rlcode/reinforcement-learning-kr"
 
