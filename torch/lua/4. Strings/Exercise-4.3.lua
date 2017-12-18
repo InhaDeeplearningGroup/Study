@@ -20,15 +20,4 @@ str = "start: "
 
 print(insert_string1(strings, position, str))
 
-function insert_string2(strings, position, str)
-  part1 = string.gmatch
-  part2 = string.sub(strings, position)
-  final = part1 .. str .. part2
-  return final
-end
-
-strings = "hello world"
-position = 7
-str = "small "
-
-print(insert_string2(strings, position, str))
+-- Still ongoing...
