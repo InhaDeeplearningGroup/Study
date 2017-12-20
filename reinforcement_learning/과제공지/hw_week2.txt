@@ -1,0 +1,7 @@
+week2_homework
+
+1. Policy Gradient And Q-Learning 코드 돌려보기
+
+2. Q-Learning 코드에 environment customize 해보기
+
+3. Policy Gradient 코드 케라스 def build_model 수정해서 수렴 빨라지는지 확인해보기.
