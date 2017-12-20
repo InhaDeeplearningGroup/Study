@@ -5,3 +5,12 @@ week2_homework
 2. Q-Learning 코드에 environment customize 해보기
 
 3. Policy Gradient 코드 케라스 def build_model 수정해서 수렴 빨라지는지 확인해보기.
+
+4. Policy Gradient 코드에서 States 수정해보기.
+
+
+Dead line: ~ 12.26 23:59
+
+
+
+
