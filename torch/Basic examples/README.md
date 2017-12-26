@@ -11,9 +11,10 @@ This corner consists of 5 sections.
 
 The dataset we used is MNIST, CIFAR, and SVHN.
 
-If you have any questions, feel free to send an-email
+This examples are based on oxford machine learning lecture, 2015
 
-kdhht5022@gmail.com
+Reference contents are below
+[https://github.com/LeeTaewoo/torch_kor_manual/tree/master/oxford_ml_practicals]
 
 
 
