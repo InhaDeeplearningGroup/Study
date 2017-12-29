@@ -20,16 +20,8 @@ opt.batch_size = 1000
 opt.train_size = 60000
 opt.test_size = 0
 opt.epochs = 10
-
-if opt.optimization == 'lbfgs' then
-  optimState = {
-    learningRate = 1e-1,
-    maxIter = 2,
-    nCorrection = 10
-  }
-  optimMethod = optim.lbfgs
   
-elseif opt.optimization == 'sgd' then
+if opt.optimization == 'sgd' then
   optimState = {
     learningRate = 1e-1,
     momentum = 0,
