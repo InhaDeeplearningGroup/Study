@@ -4,10 +4,12 @@ tensorflow를 이용한 간단한 CNN model 예제입니다.
 
 데이터 셋은 CIFAR-10 데이터 셋을 사용하였습니다. 
 
-(추후 SVHN 데이터 셋 추가 예정)
+(SVHN 데이터 셋 생성 및 tfrecord 변환 파일 추가)
 
 데이터 셋을 생성하기 위해서는 아래 파이썬 파일을 실행시키면 됩니다.
 > python cifar10_full.py
+
+> python svhn_full.py
 
 ./dataset/cifar\ 10/seed1/에 tfrecord 형식의 데이터 파일을 확인하실 수 있습니다.
 
