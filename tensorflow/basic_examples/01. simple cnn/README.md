@@ -1,4 +1,4 @@
-# 01. Simple cnn
+# 01. Simple cnn model
 
 tensorflow를 이용한 간단한 CNN model 예제입니다.
 
