@@ -1,4 +1,6 @@
-from __future__ import print_function
+__author__ = "kdhht5022@gmail.com"
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import tensorflow as tf
 from keras.backend.tensorflow_backend import set_session
