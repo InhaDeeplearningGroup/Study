@@ -1,5 +1,5 @@
 __author__ = "kdhht5022@gmail.com"
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import numpy as np
@@ -34,7 +34,7 @@ sys.setrecursionlimit(2 ** 20)
 from model import DNN, Simple_CNN
 
 num_classes = 2
-batch_size = 8
+batch_size = 32
 data_augmentation = True
 maxepoches = 250
 learning_rate = 0.001
@@ -57,8 +57,8 @@ def load_from_npz(data_name):
         return values
     
     
-def root_mean_squared_error(y_true, y_pred):
-        return K.sqrt(K.mean(K.square(y_pred - y_true), axis=-1)) 
+def RMSE(y_true, y_pred):
+    return K.sqrt(K.mean(K.square(y_pred - y_true), axis=-1))
     
     
 X_data_name_1 = '../../.npz'
@@ -79,14 +79,14 @@ X_test = np.reshape(X_test, (len(X_test), len(X_train[1])*len(X_train[2])*3))
 
 #optimization details
 adam = Adam(lr=lrf, decay=lr_decay)
-dnn.compile(loss='mse', optimizer=adam, metrics=[RMSE_aousal, RMSE_valence])
+dnn.compile(loss='mse', optimizer=adam, metrics=[RMSE])
 
 for epoch in range(1, maxepoches):
 
     if epoch % 25 == 0 and epoch > 0:
         lrf /= 2
         adam = Adam(lr=lrf, decay=lr_decay)
-        dnn.compile(loss='mse', optimizer=adam, metrics=[RMSE_aousal, RMSE_valence])
+        dnn.compile(loss='mse', optimizer=adam, metrics=[RMSE])
         
     dnn.fit(X_train, y_train, epochs=epoch, initial_epoch=epoch-1, 
             shuffle=True, batch_size=batch_size,
@@ -102,7 +102,7 @@ X_test = np.reshape(X_test, (len(X_test), len(X_train[1]), len(X_train[2]), 3))
 
 #optimization details
 adam = Adam(lr=lrf, decay=lr_decay)
-simple_cnn.compile(loss='mse', optimizer=adam, metrics=[RMSE_aousal, RMSE_valence])
+simple_cnn.compile(loss='mse', optimizer=adam, metrics=[RMSE])
 
 if not data_augmentation:
     simple_cnn.fit(X_train, y_train, epochs=maxepoches, shuffle=True, batch_size=batch_size,
@@ -126,7 +126,7 @@ else:
         if epoch % 25 == 0 and epoch > 0:
             lrf /= 2
             adam = Adam(lr=lrf, decay=lr_decay)
-            simple_cnn.compile(loss='mse', optimizer=adam, metrics=[RMSE_aousal, RMSE_valence])
+            simple_cnn.compile(loss='mse', optimizer=adam, metrics=[RMSE])
     
         historytemp = simple_cnn.fit_generator(datagen.flow(X_train, y_train, batch_size=batch_size),
                                                steps_per_epoch=X_train.shape[0] // batch_size,
