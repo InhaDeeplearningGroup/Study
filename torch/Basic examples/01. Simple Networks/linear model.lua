@@ -190,3 +190,6 @@ print("[INFO] number of correct labels: " .. tostring(n_correct_labels))
 total_acc = n_correct_labels / n_testData[1] * 100
 print("[INFO] Total accuracy: " .. tostring(total_acc) .. "%")
 print("-----------------------------------------\n")
+
+
+
