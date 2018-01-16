@@ -78,3 +78,4 @@ def Simple_CNN():
     model.add(Activation('linear'))
     model.summary()
     return model
+
