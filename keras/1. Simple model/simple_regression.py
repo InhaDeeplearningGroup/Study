@@ -79,14 +79,14 @@ X_test = np.reshape(X_test, (len(X_test), len(X_train[1])*len(X_train[2])*3))
 
 #optimization details
 adam = Adam(lr=lrf, decay=lr_decay)
-dnn.compile(loss='mse', optimizer=adam, metrics=[RMSE])
+dnn.compile(loss='mean_squared_error', optimizer=adam, metrics=[RMSE])
 
 for epoch in range(1, maxepoches):
 
     if epoch % 25 == 0 and epoch > 0:
         lrf /= 2
         adam = Adam(lr=lrf, decay=lr_decay)
-        dnn.compile(loss='mse', optimizer=adam, metrics=[RMSE])
+        dnn.compile(loss='mean_squared_error', optimizer=adam, metrics=[RMSE])
         
     dnn.fit(X_train, y_train, epochs=epoch, initial_epoch=epoch-1, 
             shuffle=True, batch_size=batch_size,
@@ -102,7 +102,7 @@ X_test = np.reshape(X_test, (len(X_test), len(X_train[1]), len(X_train[2]), 3))
 
 #optimization details
 adam = Adam(lr=lrf, decay=lr_decay)
-simple_cnn.compile(loss='mse', optimizer=adam, metrics=[RMSE])
+simple_cnn.compile(loss='mean_squared_error', optimizer=adam, metrics=[RMSE])
 
 if not data_augmentation:
     simple_cnn.fit(X_train, y_train, epochs=maxepoches, shuffle=True, batch_size=batch_size,
@@ -126,7 +126,7 @@ else:
         if epoch % 25 == 0 and epoch > 0:
             lrf /= 2
             adam = Adam(lr=lrf, decay=lr_decay)
-            simple_cnn.compile(loss='mse', optimizer=adam, metrics=[RMSE])
+            simple_cnn.compile(loss='mean_squared_error', optimizer=adam, metrics=[RMSE])
     
         historytemp = simple_cnn.fit_generator(datagen.flow(X_train, y_train, batch_size=batch_size),
                                                steps_per_epoch=X_train.shape[0] // batch_size,
