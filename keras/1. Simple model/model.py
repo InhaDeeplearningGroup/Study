@@ -79,3 +79,4 @@ def Simple_CNN():
     model.summary()
     return model
 
+
