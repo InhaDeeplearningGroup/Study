@@ -1,10 +1,12 @@
 How to use
 ==============
 
-> 1. create .c and write 
-> 2. gcc compile
+1) create .c and write
 
->    $ gcc -o example example.c
-> 3. run Unix run file
+2) gcc compile
 
->    $ ./A
+> $ gcc -o example example.c
+
+3) Run Unix run file
+
+> $ ./example
