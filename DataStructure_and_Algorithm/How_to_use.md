@@ -7,6 +7,6 @@ How to use
 
 > $ gcc -o example example.c
 
-3) Run Unix run file
+3) Run Unix exec file
 
 > $ ./example
