@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Queue.dir/main.cpp.o CMakeFiles/Queue.dir/CircleArrayQueue.cpp.o CMakeFiles/Queue.dir/DynArrayQueue.cpp.o CMakeFiles/Queue.dir/ListQueue.cpp.o CMakeFiles/Queue.dir/ArrayStack.cpp.o  -o Queue 

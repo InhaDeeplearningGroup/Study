@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/lemin/CLionProjects/Queue/ArrayStack.cpp
+iostream
+-
+
+/Users/lemin/CLionProjects/Queue/ArrayStack.h
+iostream
+-
+
+/Users/lemin/CLionProjects/Queue/CircleArrayQueue.cpp
+iostream
+-
+
+/Users/lemin/CLionProjects/Queue/DynArrayQueue.cpp
+iostream
+-
+
+/Users/lemin/CLionProjects/Queue/ListQueue.cpp
+iostream
+-
+
+/Users/lemin/CLionProjects/Queue/main.cpp
+iostream
+-
+ArrayStack.h
+/Users/lemin/CLionProjects/Queue/ArrayStack.h
+
